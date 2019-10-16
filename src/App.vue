@@ -1,18 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HelloWorld v-bind:msg="message" />
+    <input v-model="message" placeholder="modifiez-moi">
+    <p>Le message est : {{ message }}</p>
+    <todo-list />
+    <todo-item />
+    <add-todo />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import TodoList from './components/TodoList.vue'
+import TodoItem from './components/TodoItem.vue'
+import AddTodo from './components/AddTodo.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
-  }
+    TodoList,
+    TodoItem,
+    AddTodo,
+    HelloWorld,
+  },
+  data: function () {
+    return {
+      message: 'LOOL'
+    }
+  },
 }
 </script>
 
