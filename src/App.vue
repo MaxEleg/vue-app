@@ -1,8 +1,5 @@
 <template>
   <div id="app">
-    <HelloWorld v-bind:msg="message" />
-    <input v-model="message" placeholder="modifiez-moi">
-    <p>Le message est : {{ message }}</p>
     <todo-list />
     <todo-item />
     <add-todo />
@@ -10,7 +7,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import TodoList from './components/TodoList.vue'
 import TodoItem from './components/TodoItem.vue'
 import AddTodo from './components/AddTodo.vue'
@@ -21,7 +17,6 @@ export default {
     TodoList,
     TodoItem,
     AddTodo,
-    HelloWorld,
   },
   data: function () {
     return {

@@ -22,7 +22,7 @@ export default {
     console.log('composant created morray')
   },
   mounted: function(){
-    console.log('composant mounted morray')
+    console.log('composant mounted morray');
   },
   updated: function(){
     console.log('composant updated morray')
